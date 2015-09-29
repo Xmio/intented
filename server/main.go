@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/GeertJohan/go.rice"
+	"github.com/Xmio/intented"
 	"github.com/Xmio/intented/datastores"
 	"github.com/caarlos0/env"
 	"github.com/jmoiron/sqlx"
@@ -41,6 +42,11 @@ func server(config config, db *sqlx.DB) *echo.Echo {
 	exec.Get("/status", func(c *echo.Context) error {
 		return c.NoContent(http.StatusOK)
 	})
+
+	leadHandler := intented.NewLeadHandler(datastores.NewLead(db))
+
+	exec.Post("/lead/:mail/:invited", leadHandler.Create)
+	exec.Get("/lead/:hashCode", leadHandler.CountByInvites)
 
 	assetHandler := http.FileServer(rice.MustFindBox("static").HTTPBox())
 	exec.Get("/", func(c *echo.Context) error {

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ContaAzul/ab/datastores"
+	"github.com/Xmio/intented/datastores"
 	"github.com/caarlos0/env"
 	"github.com/jmoiron/sqlx"
 )
