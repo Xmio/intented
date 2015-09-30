@@ -17,7 +17,7 @@ import (
 type config struct {
 	Port        string `env:"PORT" envDefault:"3000"`
 	Production  bool   `env:"PRODUCTION"`
-	DatabaseURL string `env:"DATABASE_URL" envDefault:"postgres://localhost:5432/intented"`
+	DatabaseURL string `env:"DATABASE_URL" envDefault:"postgres://localhost:5432/intented?sslmode=disable"`
 }
 
 func main() {
@@ -45,7 +45,7 @@ func server(config config, db *sqlx.DB) *echo.Echo {
 
 	leadHandler := intented.NewLeadHandler(datastores.NewLead(db))
 
-	exec.Post("/lead/:mail/:invited", leadHandler.Create)
+	exec.Post("/lead", leadHandler.Create)
 	exec.Get("/lead/:hashCode", leadHandler.CountByInvites)
 
 	assetHandler := http.FileServer(rice.MustFindBox("static").HTTPBox())

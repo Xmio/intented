@@ -19,17 +19,17 @@ func NewLeadHandler(ds datastores.Lead) LeadHandler {
 
 // Create a new lead in database
 func (h LeadHandler) Create(c *echo.Context) error {
-	name := c.Form("name")
-	if name == "" {
-		return c.String(http.StatusBadRequest, "name is mandatory")
+	mail := c.Form("mail")
+	if mail == "" {
+		return c.String(http.StatusBadRequest, "mail is mandatory")
 	}
 	hashCode := c.Form("hashCode")
-	return h.ds.Create(name, hashCode)
+	return h.ds.Create(mail, hashCode)
 }
 
 // CountByInvites count leads by invite
 func (h LeadHandler) CountByInvites(c *echo.Context) error {
-	hashCode := c.Form("hashCode")
+	hashCode := c.Param("hashCode")
 	if hashCode == "" {
 		return c.String(http.StatusBadRequest, "hashCode is mandatory")
 	}

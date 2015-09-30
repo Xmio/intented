@@ -6,8 +6,7 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-// NewDBConnectionPool creates a new sqlx.DB connecting to DATABASE_URL also
-// pinging it to guarantee it's OK.
+// NewDBConnectionPool creates a new sqlx.DB connecting to DATABASE_URL
 func NewDBConnectionPool(url string) *sqlx.DB {
 	db, err := sqlx.Open("postgres", url)
 	if err != nil {
