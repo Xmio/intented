@@ -6,7 +6,9 @@ const createLeadStm = `
 	INSERT INTO leads(id, mail, hashCode, invited)
 	VALUES(nextval('seq_leads'), $1, md5(to_char(now(), 'YYYYMMDDHHMISSMS')), $2)
 `
-
+const getLeadStm = `
+select hashCode from leads where mail = $1
+`
 const countInvitesQuery = `
 	SELECT count(1)
 	FROM leads
@@ -17,6 +19,7 @@ const countInvitesQuery = `
 type Lead interface {
 	Create(mail string, invited string) error
 	CountByInvites(hashCode string) (int64, error)
+	GetHashByMail(mail string) (string, error)
 }
 
 type lead struct {
@@ -38,4 +41,10 @@ func (ds lead) Create(mail string, invited string) error {
 func (ds lead) CountByInvites(hashCode string) (int64, error) {
 	var count int64
 	return count, ds.db.Get(&count, countInvitesQuery, hashCode)
+}
+
+// Get hashCode by mail
+func (ds lead) GetHashByMail(mail string) (string, error) {
+	var hashCode string
+	return hashCode, ds.db.Get(&hashCode, getLeadStm, mail)
 }

@@ -2,6 +2,7 @@ package intented
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/Xmio/intented/datastores"
 	"github.com/labstack/echo"
@@ -23,8 +24,24 @@ func (h LeadHandler) Create(c *echo.Context) error {
 	if mail == "" {
 		return c.String(http.StatusBadRequest, "mail is mandatory")
 	}
-	hashCode := c.Form("hashCode")
-	return h.ds.Create(mail, hashCode)
+
+	result, err := h.ds.GetHashByMail(mail)
+	if result != "" {
+		return c.JSON(http.StatusOK, result)
+	}
+
+	invited := c.Form("invited")
+	h.ds.Create(mail, invited)
+
+	result, err = h.ds.GetHashByMail(mail)
+	if err != nil {
+		return err
+	}
+
+	cookie := http.Cookie{Name: "ownHash", Value: result, Expires: time.Now().Add(365 * 24 * time.Hour)}
+	http.SetCookie(c.Response().Writer(), &cookie)
+
+	return c.JSON(http.StatusOK, result)
 }
 
 // CountByInvites count leads by invite
@@ -33,9 +50,9 @@ func (h LeadHandler) CountByInvites(c *echo.Context) error {
 	if hashCode == "" {
 		return c.String(http.StatusBadRequest, "hashCode is mandatory")
 	}
-	result, err := h.ds.CountByInvites(hashCode)
+	count, err := h.ds.CountByInvites(hashCode)
 	if err != nil {
 		return err
 	}
-	return c.JSON(http.StatusOK, result)
+	return c.JSON(http.StatusOK, count)
 }
