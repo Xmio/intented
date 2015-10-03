@@ -6,6 +6,9 @@ requirejs.config({
     shim: {
         'jQuery': {
             exports: '$'
+        },
+         "bootstrap": {
+            deps: ["jQuery"]
         }
     }
 });
