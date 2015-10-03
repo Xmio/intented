@@ -32,7 +32,7 @@
 }
 
 .container h4 {
-  font-family: PT Sans Narrow';
+  font-family: PT Sans Narrow;
   color: #323b43;
   margin-top: 41px;
   text-align: center;
@@ -45,6 +45,21 @@
   font-size: 18px;
   text-align: center;
   line-height: 26px;
+}
+
+.intented-footer {
+  height: 189px;
+  background-color: #f4f7f9;
+}
+
+.call-to-lead {
+  width: 360px;
+  height: 50px;
+  border-radius: 25px;
+  background: #303b42;
+  color: #ffffff;
+  display: block;
+  margin: 90px auto 102px auto;
 }
 
 /* Customize the text color and shadow color and to optimize text legibility. */
