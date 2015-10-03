@@ -1,9 +1,9 @@
 var modules = ['service',
-  'bootstrap',
-  'jQuery'
+  'jQuery',
+  'bootstrap'
 ];
 
-define(modules, function (service,bootstrap, $) {
+define(modules, function (service, $, bootstrap) {
 
   $('#botao').on('click', service.postLead);
 
