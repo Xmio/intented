@@ -10,4 +10,4 @@ requirejs.config({
     }
 });
 
-require(['scripts']);
+require(['service']);
