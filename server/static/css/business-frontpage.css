@@ -1,0 +1,63 @@
+
+.intented-header {
+    height: 694px;
+    background-color: #303b42;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intented-header .header-sub-title {
+  font-family: PTSerif-Bold;
+  font-weight: 600;
+  text-align: center;
+  font-size: 38px;
+  margin-top: 25px;
+}
+
+.intented-header .header-title {
+    text-align: center;
+    font-family: PTSerif-Bold;
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+.header-logo {
+  margin-top: 62px;
+  margin-left: 151px;
+  background: url('http://oshine.brandexponentscr.netdna-cdn.com/oshin/v16/wp-content/uploads/sites/18/2014/12/oshine-v15-logo-white.png') center center no-repeat scroll;
+  width: 150px;
+  height: 35px;
+}
+
+.container h4 {
+  font-family: PT Sans Narrow';
+  color: #323b43;
+  margin-top: 41px;
+  text-align: center;
+}
+
+.container p {
+  font-family: PTSans-Regular;
+  color: #59626a;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 26px;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
