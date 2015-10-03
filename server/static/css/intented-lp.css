@@ -43,14 +43,14 @@
   height: 35px;
 }
 
-.container h4 {
+.container .col-sm-4 h4 {
   font-family: PT Sans Narrow;
   color: #323b43;
   margin-top: 41px;
   text-align: center;
 }
 
-.container p {
+.container .col-sm-4 p {
   font-family: PTSans-Regular;
   color: #59626a;
   margin-top: 10px;
@@ -83,6 +83,30 @@
 .call-to-lead.btn:hover {
   color: #ffffff;
   background-color: #58626a;
+  border-color: #333;
+}
+
+.send-mail {
+  width: 360px;
+  height: 50px;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #303b42;
+  display: block;
+  margin: 90px auto 102px auto;
+  font-size: 18px;
+  border-color: #333;
+}
+
+.send-mail.btn:visited {
+  background: #ffffff;
+  color: #303b42;
+  border-color: #333;
+}
+
+.send-mail.btn:hover {
+  color: #303b42;
+  background-color: #ffffff;
   border-color: #333;
 }
 
