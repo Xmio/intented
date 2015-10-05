@@ -7,10 +7,10 @@ define(modules, function ($, labels) {
     exports.translate = translate;
 
     function translate(hash){
-      var lang = hash.substring(1).toUpperCase();
-     if(lang == "PT")
-        build(lang);
-      else if(hash == "ES")
+      var lang = hash.toUpperCase();
+     if(lang.indexOf("PT") > -1)
+        build("PT");
+      else if(lang.indexOf("ES") > -1)
         build("ES");
       else
         build("EN");
