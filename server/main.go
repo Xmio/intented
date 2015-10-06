@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/GeertJohan/go.rice"
-	"github.com/Xmio/intented"
-	"github.com/Xmio/intented/datastores"
+	"github.com/Xmio/intented/server/datastores"
+	"github.com/Xmio/intented/server/lead"
 	"github.com/caarlos0/env"
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo"
@@ -43,7 +43,7 @@ func server(config config, db *sqlx.DB) *echo.Echo {
 		return c.NoContent(http.StatusOK)
 	})
 
-	leadHandler := intented.NewLeadHandler(datastores.NewLead(db))
+	leadHandler := lead.NewHandler(datastores.NewLead(db))
 
 	exec.Post("/lead", leadHandler.Create)
 	exec.Get("/lead/:hashCode", leadHandler.CountByInvites)
