@@ -1,25 +1,25 @@
-package intented
+package lead
 
 import (
 	"net/http"
 	"time"
 
-	"github.com/Xmio/intented/datastores"
+	"github.com/Xmio/intented/server/datastores"
 	"github.com/labstack/echo"
 )
 
-// LeadHandler contains all /lead handlers
-type LeadHandler struct {
+// Handler contains all /lead handlers
+type Handler struct {
 	ds datastores.Lead
 }
 
-// NewLeadHandler creates a echo handler for /lead
-func NewLeadHandler(ds datastores.Lead) LeadHandler {
-	return LeadHandler{ds}
+// NewHandler creates a echo handler for /lead
+func NewHandler(ds datastores.Lead) Handler {
+	return Handler{ds}
 }
 
 // Create a new lead in database
-func (h LeadHandler) Create(c *echo.Context) error {
+func (h Handler) Create(c *echo.Context) error {
 	mail := c.Form("mail")
 	if mail == "" {
 		return c.String(http.StatusBadRequest, "mail is mandatory")
@@ -45,7 +45,7 @@ func (h LeadHandler) Create(c *echo.Context) error {
 }
 
 // CountByInvites count leads by invite
-func (h LeadHandler) CountByInvites(c *echo.Context) error {
+func (h Handler) CountByInvites(c *echo.Context) error {
 	hashCode := c.Param("hashCode")
 	if hashCode == "" {
 		return c.String(http.StatusBadRequest, "hashCode is mandatory")
