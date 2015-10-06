@@ -8,21 +8,55 @@
     -o-background-size: cover;
 }
 
-.intented-header .header-sub-title {
-  font-family: PTSerif-Bold;
+.header-sub-title {
+  font-family:  'PT Serif', serif;
   font-weight: 600;
   text-align: center;
   font-size: 38px;
   margin-top: 25px;
-  width: 450px;
+  width: 615px;
   margin: auto;
 }
 
-.intented-header .header-title {
+.header-title {
     text-align: center;
-    font-family: PTSerif-Bold;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
     font-size: 20px;
     margin-top: 80px;
+}
+
+.body-sub-title {
+  font-family:  'PT Serif', serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 38px;
+  width: 615px;
+  margin: auto;
+}
+
+.form-control {
+  width: 360px;
+  margin: 65px auto auto auto;
+}
+
+.body-explain {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  width: 710px;
+  line-height: 26px;
+  margin: 27px auto auto auto;
+}
+
+.body-title {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 80px;
+    color: #979a98;
 }
 
 .intented-header .lenguage {
@@ -33,6 +67,8 @@
 
 .intented-header .col-lg-2 {
   margin-top: 77px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
 }
 
 .header-logo {
@@ -44,14 +80,16 @@
 }
 
 .container .col-sm-4 h4 {
-  font-family: PT Sans Narrow;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
   color: #323b43;
   margin-top: 41px;
   text-align: center;
 }
 
 .container .col-sm-4 p {
-  font-family: PTSans-Regular;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
   color: #59626a;
   margin-top: 10px;
   font-size: 18px;
@@ -60,7 +98,6 @@
 }
 
 .intented-footer {
-  height: 189px;
   background-color: #f4f7f9;
 }
 
@@ -68,7 +105,7 @@
   width: 360px;
   height: 50px;
   border-radius: 25px;
-  background: #303b42;
+  background: #00b96a;
   color: #ffffff;
   display: block;
   margin: 90px auto 102px auto;
@@ -76,7 +113,7 @@
 }
 
 .call-to-lead.btn:visited {
-  background: #303b42;
+  background: #00b96a;
   color: #ffffff;
 }
 
