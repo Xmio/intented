@@ -7,6 +7,12 @@
     -o-background-size: cover;
 }
 
+.modal-content {
+    padding-top: 45px;
+    padding-left: 55px;
+    padding-bottom: 50px;
+}
+
 .intented-header .container {
     padding-top: 77px;
     padding-left: 150px;
