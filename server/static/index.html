@@ -9,19 +9,19 @@
   </head>
   <body>
     <div>
-      <div class="container">
+      <div>
         <header class="intented-header">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="header-logo"></div>
-                  </div>
-                  <div class="col-md-6 choice-lenguage">
-                    <a class="lenguage pt-lang" href="#PT">PT</a>
-                    <a class="lenguage en-lang" href="#EN">EN</a>
-                    <a class="lenguage es-lang" href="#ES">ES</a>
-                  </div>
+
+          <div class="header-organize">
+              <div class="header-logo"></div>
+              <div class="choice-lenguage">
+                <a class="lenguage pt-lang" href="#PT">PT</a>
+                <a class="lenguage en-lang" href="#EN">EN</a>
+                <a class="lenguage es-lang" href="#ES">ES</a>
               </div>
+          </div>
+
+          <div class="container">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="tagline header-title">
@@ -93,8 +93,15 @@
                   <div class="body-explain">
                     <span>Estamos em beta fechado no momento. Cadastre-se com o email da sua empresa e nós retornaremos para você assim que possível.</span>
                   </div>
-                    <input class="form-control">
                 </div>
+              </div>
+              <div class="row">
+                  <div class="group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>EMAIL PARA ACESSO BETA</label>
+                  </div>
               </div>
               <button type="button" class="btn call-to-lead" data-toggle="modal" data-target=".email-modal">Cadastrar email para acesso</button>
             </div>
