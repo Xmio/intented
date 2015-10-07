@@ -1,6 +1,4 @@
-
 .intented-header {
-    height: 694px;
     background-color: #303b42;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,109 +6,180 @@
     -o-background-size: cover;
 }
 
-.intented-header .header-sub-title {
-  font-family: PTSerif-Bold;
-  font-weight: 600;
-  text-align: center;
-  font-size: 38px;
-  margin-top: 25px;
-  width: 450px;
-  margin: auto;
+.modal-content {
+    padding-top: 45px;
+    padding-left: 55px;
+    padding-bottom: 50px;
 }
 
-.intented-header .header-title {
+.intented-header .container {
+    padding-top: 77px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.header-sub-title {
+    font-family:  'PT Serif', serif;
+    font-weight: 600;
     text-align: center;
-    font-family: PTSerif-Bold;
+    font-size: 38px;
+    padding-right: 150px;
+    padding-left: 150px;
+    margin: 25px auto auto auto;
+}
+
+.header-organize {
+    padding-top: 77px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.header-title {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
     font-size: 20px;
     margin-top: 80px;
 }
 
-.intented-header .lenguage {
-  margin-left: 5px;
-  font-size: 16px;
-  color: #ffffff;
+.body-sub-title {
+    font-family:  'PT Serif', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 38px;
+    line-height: 44px;
+    width: 690px;
+    margin: auto;
 }
 
-.intented-header .col-lg-2 {
-  margin-top: 77px;
+.body-sub-title.benefits {
+    margin: 22px auto 98px auto;
+}
+
+.body-sub-title.register {
+    margin: 90px auto 27px auto;
+}
+
+.form-control {
+    width: 360px;
+    margin: 65px auto auto auto;
+}
+
+.body-explain {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    width: 710px;
+    line-height: 26px;
+    margin: 27px auto auto auto;
+    color: #979a98
+}
+
+.body-title {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 80px;
+    color: #979a98;
+}
+
+.intented-header .lenguage {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.intented-header .choice-lenguage {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    text-align: right;
+    float: right;
 }
 
 .header-logo {
-  margin-top: 62px;
-  margin-left: 111px;
-  background: url('http://oshine.brandexponentscr.netdna-cdn.com/oshin/v16/wp-content/uploads/sites/18/2014/12/oshine-v15-logo-white.png') center center no-repeat scroll;
-  width: 150px;
-  height: 35px;
+    background: url('http://oshine.brandexponentscr.netdna-cdn.com/oshin/v16/wp-content/uploads/sites/18/2014/12/oshine-v15-logo-white.png') center center no-repeat scroll;
+    width: 150px;
+    height: 35px;
+    float: left;
+}
+
+.img-responsive.img-center {
+  margin: auto auto 36px auto;
+}
+
+.img-responsive.product-img {
+  margin: 58px auto auto auto;
 }
 
 .container .col-sm-4 h4 {
-  font-family: PT Sans Narrow;
-  color: #323b43;
-  margin-top: 41px;
-  text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    color: #323b43;
+    text-align: center;
 }
 
 .container .col-sm-4 p {
-  font-family: PTSans-Regular;
-  color: #59626a;
-  margin-top: 10px;
-  font-size: 18px;
-  text-align: center;
-  line-height: 26px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    color: #59626a;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 26px;
 }
 
 .intented-footer {
-  height: 189px;
-  background-color: #f4f7f9;
+    background-color: #f5f5f5;
 }
 
 .call-to-lead {
-  width: 360px;
-  height: 50px;
-  border-radius: 25px;
-  background: #303b42;
-  color: #ffffff;
-  display: block;
-  margin: 90px auto 102px auto;
-  font-size: 18px;
+    width: 360px;
+    height: 50px;
+    border-radius: 25px;
+    background: #00b96a;
+    color: #ffffff;
+    display: block;
+    margin: 90px auto 102px auto;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .call-to-lead.btn:visited {
-  background: #303b42;
-  color: #ffffff;
+    background: #00b96a;
+    color: #ffffff;
 }
 
 .call-to-lead.btn:hover {
-  color: #ffffff;
-  background-color: #58626a;
-  border-color: #333;
+    color: #ffffff;
+    background-color: #58626a;
+    border-color: #333;
 }
 
 .send-mail {
-  width: 360px;
-  height: 50px;
-  border-radius: 25px;
-  background: #ffffff;
-  color: #303b42;
-  display: block;
-  margin: 90px auto 102px auto;
-  font-size: 18px;
-  border-color: #333;
+    width: 360px;
+    height: 50px;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #303b42;
+    display: block;
+    margin: 90px auto 102px auto;
+    font-size: 18px;
+    border-color: #333;
 }
 
 .send-mail.btn:visited {
-  background: #ffffff;
-  color: #303b42;
-  border-color: #333;
+    background: #ffffff;
+    color: #303b42;
+    border-color: #333;
 }
 
 .send-mail.btn:hover {
-  color: #303b42;
-  background-color: #ffffff;
-  border-color: #333;
+    color: #303b42;
+    background-color: #ffffff;
+    border-color: #333;
 }
-
-/* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
     text-shadow: 0 0 10px #000;
@@ -123,4 +192,41 @@
 
 footer {
     margin: 50px 0;
+}
+
+.group {
+    width: 360px;
+    margin: 65px auto auto auto;
+    position:relative;
+}
+
+input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:360px;
+    border:none;
+    border-bottom:1px solid #999;
+    background-color: #f5f5f5;
+}
+input:focus {
+    outline:none;
+}
+
+label {
+    color:#999;
+    font-size:16px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:12px;
 }
