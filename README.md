@@ -1,4 +1,5 @@
-# Intented
+# Intented [![Build Status](https://img.shields.io/circleci/project/Xmio/intented/master.svg?style=flat-square)](https://circleci.com/gh/Xmio/intented)
+
 
 ### A LP to intented with a referral engine to generate leads
 we believe that... Good projects starts with great negociation.
