@@ -1,13 +1,13 @@
-#Intented
+# Intented [![Build Status](https://img.shields.io/circleci/project/Xmio/intented/master.svg?style=flat-square)](https://circleci.com/gh/Xmio/intented)
+
 
 ### A LP to intented with a referral engine to generate leads
 we believe that... Good projects starts with great negociation.
 
 
-#Start Server
+# Start Server
 
-- go get -v -t ./*
-- go build server/main.go 
+- go get -v -t -d ./...
 - go run server/main.go
  
-Access: http://localhost:3000/
+Open http://localhost:3000 in your browser.
