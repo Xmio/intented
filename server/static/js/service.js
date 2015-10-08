@@ -3,30 +3,40 @@ var modules = ['jQuery'];
 define(modules, function ($) {
 
     function service(){
+      var lead = {
+        mail :'',
+        invited : ''
+      }
       var exports = {};
       exports.postLead = postLead;
 
       function postLead(){
         $.ajax({
-          url : '/lead/',
+          url : '/lead',
           type : 'POST',
-          contentType : "application/json; charset=utf-8",
           success: onSuccess,
-          error : showError,
-          data : JSON.stringify(getLead())
+          data : getLead()
         });
       }
 
-      function getLead(){
+      function onSuccess() {
 
       }
 
-      function showError(){
-
+      function getLead() {
+        lead.mail=$(".email")[0].value;
+        return lead;
       }
 
-      function onSuccess(){
+      $(".call-to-lead").click(validate)
 
+      function validate() {
+        email =$(".email")[0].value;
+        if (!email || email === '') {
+          alert("informe o email");
+          return false;
+        } else
+          postLead();
       }
 
       return exports;
@@ -34,4 +44,3 @@ define(modules, function ($) {
 
     return service();
 });
-

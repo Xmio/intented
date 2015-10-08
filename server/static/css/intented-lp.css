@@ -8,8 +8,8 @@
 
 .modal-content {
     padding-top: 45px;
-    padding-left: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
 .intented-header .container {
@@ -26,6 +26,10 @@
     padding-right: 150px;
     padding-left: 150px;
     margin: 25px auto auto auto;
+}
+
+.social-buttons .btn-social-icon {
+    margin: 20px;
 }
 
 .header-organize {
@@ -120,7 +124,18 @@
     text-align: center;
 }
 
-.container .col-sm-4 p {
+.offer-bonus {
+    margin: 20px auto 27px auto;
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    color: #00b96a;
+    width: 450px
+}
+
+.feature-explain {
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
     color: #59626a;
@@ -128,6 +143,15 @@
     font-size: 18px;
     text-align: center;
     line-height: 26px;
+}
+
+.referal-link {
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 23px;
+    line-height: 44px;
+    margin: auto;
 }
 
 .intented-footer {
@@ -153,8 +177,7 @@
 
 .call-to-lead.btn:hover {
     color: #ffffff;
-    background-color: #58626a;
-    border-color: #333;
+    background-color: #009966;
 }
 
 .send-mail {
