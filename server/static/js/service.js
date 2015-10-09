@@ -1,4 +1,4 @@
-var modules = ['jQuery', 'notify'];
+var modules = ['jQuery'];
 
 define(modules, function ($) {
 
