@@ -4,7 +4,7 @@ import "github.com/jmoiron/sqlx"
 
 const createLeadStm = `
 	INSERT INTO leads(id, mail, hashCode, invited)
-	VALUES(nextval('seq_leads'), $1, md5(to_char(now(), 'YYYYMMDDHHMISSMS')), $2)
+	VALUES(nextval('seq_leads'), $1, reverse(lpad((select last_value::varchar from seq_leads),4,'0')), $2)
 `
 const getLeadStm = `
 select hashCode from leads where mail = $1
