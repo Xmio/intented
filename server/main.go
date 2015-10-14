@@ -4,6 +4,8 @@ import (
 	"log"
 	"net/http"
 
+	"database/sql"
+
 	"github.com/GeertJohan/go.rice"
 	"github.com/Xmio/intented/server/datastores"
 	"github.com/Xmio/intented/server/lead"
@@ -30,7 +32,8 @@ func main() {
 	exec.Run(":" + config.Port)
 }
 
-func server(config config, db *sqlx.DB) *echo.Echo {
+func server(config config, db *sql.DB) *echo.Echo {
+	dbx := sqlx.NewDb(db, "postgres")
 	exec := echo.New()
 	if !config.Production {
 		exec.Debug()
@@ -43,7 +46,7 @@ func server(config config, db *sqlx.DB) *echo.Echo {
 		return c.NoContent(http.StatusOK)
 	})
 
-	leadHandler := lead.NewHandler(datastores.NewLead(db))
+	leadHandler := lead.NewHandler(datastores.NewLead(dbx))
 
 	exec.Post("/lead", leadHandler.Create)
 	exec.Get("/lead/:hashCode", leadHandler.CountByInvites)
