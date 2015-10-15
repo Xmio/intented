@@ -7,7 +7,10 @@ var modules = ['service',
 define(modules, function (service,translate, $, bootstrap) {
   $('#botao').on('click', service.postLead);
   bindLangEvents();
-  translate.translate(window.location.hash);
+  if(window.location.hash)
+    translate.translate(window.location.hash)
+  else
+    translate.translate(navigator.language);
 
   function bindLangEvents(){
     $('.pt-lang').on('click', function(){
