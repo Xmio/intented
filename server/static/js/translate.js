@@ -8,12 +8,12 @@ define(modules, function ($, labels) {
 
     function translate(hash){
       var lang = hash.substring(1).toUpperCase();
-     if(lang == "PT")
+     if(lang == "EN")
         build(lang);
       else if(hash == "ES")
         build("ES");
       else
-        build("EN");
+        build("PT");
     }
 
     function build(language){
