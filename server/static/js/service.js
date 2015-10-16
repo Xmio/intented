@@ -1,4 +1,4 @@
-var modules = ['jQuery'];
+var modules = ['jQuery','notification'];
 
 define(modules, function ($) {
 
@@ -40,7 +40,7 @@ define(modules, function ($) {
       function validate() {
         email =$('.email')[0].value;
         if (!email || email === '') {
-          alert('informe o email');
+          $.notification('Informe seu email.');
           return false;
         } else
           postLead();

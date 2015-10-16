@@ -1,5 +1,5 @@
 .intented-header {
-    background-color: #303b42;
+    background-color: #f5f5f5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -10,6 +10,10 @@
     padding-top: 45px;
     padding-bottom: 40px;
     text-align: center;
+}
+
+.intented-logo {
+    padding-bottom: 32px;
 }
 
 .intented-header .container {
@@ -33,9 +37,10 @@
 }
 
 .header-organize {
-    padding-top: 77px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-top: 32px;
+    padding-left: 148px;
+    padding-right: 148px;
+    background-color: #fff;
 }
 
 .header-title {
@@ -52,7 +57,7 @@
     text-align: center;
     font-size: 38px;
     line-height: 44px;
-    width: 690px;
+    width: 570px;
     margin: auto;
 }
 
@@ -62,6 +67,7 @@
 
 .body-sub-title.register {
     margin: 90px auto 27px auto;
+    width: 620px;
 }
 
 .form-control {
@@ -131,7 +137,7 @@
     text-align: center;
     font-size: 28px;
     line-height: 32px;
-    color: #00b96a;
+    color: #aa8a4b;
     width: 450px
 }
 
@@ -162,7 +168,7 @@
     width: 360px;
     height: 50px;
     border-radius: 25px;
-    background: #00b96a;
+    background: #aa8a4b;
     color: #ffffff;
     display: block;
     margin: 90px auto 102px auto;
@@ -171,13 +177,13 @@
 }
 
 .call-to-lead.btn:visited {
-    background: #00b96a;
+    background: #aa8a4b;
     color: #ffffff;
 }
 
 .call-to-lead.btn:hover {
     color: #ffffff;
-    background-color: #009966;
+    background-color: #997c43;
 }
 
 .send-mail {
