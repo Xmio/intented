@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "Xmio/intented:%BUILD_NUM%",
+    "Name": "xmio/intented:%BUILD_NUM%",
     "Update": "true"
   },
   "Ports": [
