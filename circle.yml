@@ -14,5 +14,5 @@ deployment:
       - docker build -t "xmio/intented:$CIRCLE_BUILD_NUM" .
       - docker push "xmio/intented:$CIRCLE_BUILD_NUM"
       - sed -i'' -e "s;%BUILD_NUM%;$CIRCLE_BUILD_NUM;g" ./.deploy/Dockerrun.aws.json
-      - cd .deploy && eb init -r us-east-1 newintend
+      - cd .deploy && eb init -r us-east-1 newintend1
       - cd .deploy && eb deploy -l $CIRCLE_BUILD_NUM
