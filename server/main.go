@@ -19,7 +19,7 @@ import (
 type config struct {
 	Port        string `env:"PORT" envDefault:"3000"`
 	Production  bool   `env:"PRODUCTION"`
-	DatabaseURL string `env:"DATABASE_URL" envDefault:"postgres://localhost:5432/intented?sslmode=disable"`
+	DatabaseURL string `env:"DATABASE_URL"`
 }
 
 func main() {
