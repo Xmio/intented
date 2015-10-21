@@ -16,3 +16,12 @@ deployment:
       - sed -i'' -e "s;%BUILD_NUM%;$CIRCLE_BUILD_NUM;g" ./.deploy/Dockerrun.aws.json
       - cd .deploy && eb init -r us-east-1 newintend
       - cd .deploy && eb deploy -l $CIRCLE_BUILD_NUM
+test:
+  pre:
+    - go get github.com/pierrre/gotestcover
+    - go get github.com/mattn/goveralls
+    - go get golang.org/x/tools/cmd/cover
+  override:
+    - gotestcover -race -coverprofile=coverage.out ./...
+  post:
+    - goveralls -coverprofile=coverage.out -service=circle-ci -repotoken=$COVERALLS_TOKEN
